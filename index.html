@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermo meter</title>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+     font-family: 'Dancing Script', cursive;
+    box-sizing: border-box;
+    background:linear-gradient(to right, #2a2a2a,#212121,#191919,#010002);
+    
+    }
+    
+    .fa{
+        font-size: 90px;
+    }
+    .gradient{
+        position: relative;
+        margin: 100px auto 0;
+        width: 300px;
+        height: 450px;
+        background: #000;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+    }
+    h1{
+        position: relative;
+       font-family: 'Dancing Script', cursive;
+        font-size: 2rem;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+    }
+    .gradient:before,
+    .gradient:after{
+        content: "";
+        position: absolute;
+        top : -2px;
+        left: -2px;
+        background: linear-gradient(45deg, #fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+        background-size: 400% 400%;
+        width:calc(100% + 6px);
+        height: calc(100% + 6px);
+        border-radius: 20px;
+        z-index: -1;
+        animation: animate 3s ease alternate infinite;
+    }
+    .gradient:after{
+        filter:blur(20px);
+    }
+    @keyframes animate{
+        0%{
+            background-position: 0% 50%;
+        }
+        50%{
+            background-position: 100% 50%;
+        }
+        0%{
+            background-position: 0% 50%;
+        }
+    }
+    p{
+        color: rgb(112, 111, 111);
+        text-align: center;
+    }
+    </style>
+
+</head>
+<body>
+    <div class="gradient">
+    <div class="outerdiv">
+        <div class="innerdiv">
+            <h1 class="main_heading">I am Thermometer <br><br>
+               <span id="temp" class="fa"></span>
+            </h1>
+        </div>
+    </div>
+    
+    </div>
+    <p>Powered by Eram</p>
+    <script src="script.js"></script>
+</body>
+</html>
